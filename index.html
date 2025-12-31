@@ -32,83 +32,61 @@
     </nav>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title" data-i18n="home.hero.title">Welcome to My Technology Journey</h1>
-                <p class="hero-subtitle" data-i18n="home.hero.subtitle">Exploring AI, Data, and Robotics through shared thoughts, experiences, and knowledge</p>
-                <div class="hero-buttons">
-                    <a href="/books/ai-infra/" class="btn btn-primary" data-i18n="home.hero.btn.ai">AI Infrastructure Book</a>
-                    <a href="/books/datalake-bigdata/" class="btn btn-secondary" data-i18n="home.hero.btn.data">Data Lake & Big Data Book</a>
+        <section class="home-diagram">
+            <div class="container">
+                <div class="diagram-wrapper">
+                    <div class="diagram-center">
+                        <div class="center-device">
+                            <svg class="device-icon" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="5" width="80" height="60" rx="3" fill="#f5f5f5" stroke="#000" stroke-width="1.5"/>
+                                <rect x="15" y="10" width="70" height="45" fill="#fff"/>
+                                <line x1="20" y1="15" x2="85" y2="15" stroke="#000" stroke-width="1"/>
+                                <line x1="20" y1="20" x2="75" y2="20" stroke="#000" stroke-width="0.8"/>
+                                <line x1="20" y1="25" x2="70" y2="25" stroke="#000" stroke-width="0.8"/>
+                                <rect x="20" y="30" width="50" height="20" rx="1" fill="#f0f0f0" stroke="#000" stroke-width="0.5"/>
+                                <rect x="15" y="58" width="70" height="2" rx="1" fill="#000"/>
+                                <rect x="35" y="65" width="30" height="3" rx="1.5" fill="#000"/>
+                            </svg>
+                            <h1 class="center-title" data-i18n="home.hero.title">Technology Thoughts & Books</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="diagram-branches">
+                        <div class="branch branch-1">
+                            <div class="branch-line"></div>
+                            <a href="/books/ai-infra/" class="branch-node">
+                                <div class="node-icon">📚</div>
+                                <h3 data-i18n="home.books.ai.title">AI Infrastructure</h3>
+                                <p data-i18n="home.books.ai.desc">Comprehensive guide to building and managing AI infrastructure systems</p>
+                            </a>
+                        </div>
+                        
+                        <div class="branch branch-2">
+                            <div class="branch-line"></div>
+                            <a href="/books/datalake-bigdata/" class="branch-node">
+                                <div class="node-icon">📚</div>
+                                <h3 data-i18n="home.books.data.title">Data Lake & Big Data</h3>
+                                <p data-i18n="home.books.data.desc">Deep dive into modern data architectures and big data processing</p>
+                            </a>
+                        </div>
+                        
+                        <div class="branch branch-3">
+                            <div class="branch-line"></div>
+                            <a href="/thoughts/" class="branch-node">
+                                <div class="node-icon">💭</div>
+                                <h3 data-i18n="nav.thoughts">Thoughts</h3>
+                                <p data-i18n="home.thoughts.intro">Sharing insights, experiences, and reflections on technology</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="about">
+        <section class="home-content">
             <div class="container">
-                <h2 data-i18n="home.about.title">About This Site</h2>
-                <p data-i18n="home.about.intro">This is my digital space for sharing knowledge, thoughts, and experiences in the fields of:</p>
-                <div class="topics-grid">
-                    <div class="topic-card">
-                        <div class="topic-icon">🤖</div>
-                        <h3 data-i18n="home.about.ai.title">Artificial Intelligence</h3>
-                        <p data-i18n="home.about.ai.desc">Infrastructure, systems, and practical insights</p>
-                    </div>
-                    <div class="topic-card">
-                        <div class="topic-icon">📊</div>
-                        <h3 data-i18n="home.about.data.title">Data Engineering</h3>
-                        <p data-i18n="home.about.data.desc">Data lakes, big data architectures, and analytics</p>
-                    </div>
-                    <div class="topic-card">
-                        <div class="topic-icon">🔧</div>
-                        <h3 data-i18n="home.about.robotics.title">Robotics</h3>
-                        <p data-i18n="home.about.robotics.desc">Systems, automation, and intelligent machines</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="books-preview">
-            <div class="container">
-                <h2 data-i18n="home.books.title">Featured Books</h2>
-                <div class="books-grid">
-                    <article class="book-card">
-                        <div class="book-cover ai-infra">
-                            <span class="book-icon">📚</span>
-                        </div>
-                        <div class="book-content">
-                            <h3 data-i18n="home.books.ai.title">AI Infrastructure</h3>
-                            <p data-i18n="home.books.ai.desc">Comprehensive guide to building and managing AI infrastructure systems, covering everything from model deployment to scaling ML pipelines.</p>
-                            <a href="/books/ai-infra/" class="book-link" data-i18n="home.books.ai.link">Read More →</a>
-                        </div>
-                    </article>
-                    <article class="book-card">
-                        <div class="book-cover datalake">
-                            <span class="book-icon">📚</span>
-                        </div>
-                        <div class="book-content">
-                            <h3 data-i18n="home.books.data.title">Data Lake & Big Data</h3>
-                            <p data-i18n="home.books.data.desc">Deep dive into modern data architectures, data lake design patterns, and big data processing frameworks.</p>
-                            <a href="/books/datalake-bigdata/" class="book-link" data-i18n="home.books.data.link">Read More →</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="thoughts-preview">
-            <div class="container">
-                <h2 data-i18n="home.thoughts.title">Latest Thoughts</h2>
-                <p class="section-intro" data-i18n="home.thoughts.intro">Sharing insights, experiences, and reflections on technology</p>
-                <div class="thoughts-list">
-                    <article class="thought-item">
-                        <div class="thought-meta">
-                            <span class="thought-category" data-i18n="home.thoughts.item.category">AI</span>
-                            <span class="thought-date" data-i18n="home.thoughts.item.date">Coming Soon</span>
-                        </div>
-                        <h3 data-i18n="home.thoughts.item.title">Thoughts and experiences will appear here</h3>
-                        <p data-i18n="home.thoughts.item.desc">This section will feature articles, insights, and reflections on AI, data engineering, and robotics.</p>
-                        <a href="/thoughts/" class="thought-link" data-i18n="home.thoughts.item.link">Explore All Thoughts →</a>
-                    </article>
+                <div class="content-intro">
+                    <p class="intro-text" data-i18n="home.hero.subtitle">Exploring AI, Data, and Robotics through shared thoughts, experiences, and knowledge</p>
                 </div>
             </div>
         </section>
