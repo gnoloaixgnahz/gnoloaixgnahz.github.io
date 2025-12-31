@@ -73,12 +73,13 @@ body {
 }
 
 .nav-link {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 400;
     font-size: 0.95rem;
     transition: var(--transition);
     position: relative;
+    padding: 0.5rem 0;
 }
 
 .nav-link:hover {
@@ -87,6 +88,16 @@ body {
 
 .nav-link.active {
     color: var(--text-primary);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--text-primary);
 }
 
 .nav-actions {
@@ -143,121 +154,98 @@ body {
     transition: var(--transition);
 }
 
-/* Home Diagram Section */
-.home-diagram {
-    padding: 6rem 0 8rem;
+/* Insights Main Section - Thoughtworks Style */
+.insights-main {
+    padding: 4rem 0 6rem;
     background-color: var(--bg-primary);
 }
 
-.diagram-wrapper {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.diagram-center {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.center-device {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.device-icon {
-    width: 120px;
-    height: 96px;
-    opacity: 0.8;
-}
-
-.center-title {
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--text-primary);
-    letter-spacing: -0.03em;
-    line-height: 1.2;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.diagram-branches {
+.insights-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    position: relative;
-    padding-top: 2rem;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.branch {
+.insights-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
 }
 
-.branch-line {
-    width: 2px;
-    height: 60px;
-    background: linear-gradient(to bottom, var(--text-primary), transparent);
-    opacity: 0.2;
-    margin-bottom: 1rem;
+.column-heading {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.branch-node {
+.topics-list,
+.publications-list,
+.insights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topics-list li,
+.publications-list li,
+.insights-list li {
+    margin-bottom: 1.5rem;
+}
+
+.topics-list li:last-child,
+.publications-list li:last-child,
+.insights-list li:last-child {
+    margin-bottom: 0;
+}
+
+.topics-list a {
+    color: var(--text-primary);
     text-decoration: none;
-    color: var(--text-primary);
-    text-align: center;
-    transition: var(--transition);
-    padding: 1.5rem;
-    border-radius: 0;
-    width: 100%;
-}
-
-.branch-node:hover {
-    color: var(--text-secondary);
-}
-
-.node-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    opacity: 0.9;
-}
-
-.branch-node h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
-    margin-bottom: 0.75rem;
-    color: var(--text-primary);
-    letter-spacing: -0.01em;
+    line-height: 1.6;
+    transition: var(--transition);
+    display: block;
 }
 
-.branch-node p {
-    font-size: 0.95rem;
+.topics-list a:hover {
     color: var(--text-secondary);
+}
+
+.publications-list li strong,
+.insights-list li strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.publications-list li strong a,
+.insights-list li strong a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.publications-list li strong a:hover,
+.insights-list li strong a:hover {
+    color: var(--text-secondary);
+}
+
+.publications-list li p,
+.insights-list li p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
     line-height: 1.6;
     font-weight: 400;
-}
-
-/* Home Content Section */
-.home-content {
-    padding: 4rem 0;
-    border-top: 1px solid var(--border-color);
-}
-
-.content-intro {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.intro-text {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    font-weight: 400;
+    margin: 0;
 }
 
 /* Footer - Minimalist */
@@ -292,17 +280,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 968px) {
-    .diagram-branches {
+    .insights-columns {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-
-    .branch-line {
-        height: 40px;
-    }
-
-    .center-title {
-        font-size: 2rem;
     }
 }
 
@@ -334,6 +314,10 @@ body {
         font-size: 1rem;
     }
 
+    .nav-link.active::after {
+        display: none;
+    }
+
     .lang-switcher {
         order: -1;
     }
@@ -342,42 +326,15 @@ body {
         display: flex;
     }
 
-    .home-diagram {
-        padding: 4rem 0 6rem;
+    .insights-main {
+        padding: 3rem 0 4rem;
     }
 
-    .center-title {
-        font-size: 1.75rem;
-    }
-
-    .device-icon {
-        width: 100px;
-        height: 80px;
+    .insights-columns {
+        gap: 2.5rem;
     }
 
     .container {
         padding: 0 1.5rem;
-    }
-
-    .home-content {
-        padding: 3rem 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .center-title {
-        font-size: 1.5rem;
-    }
-
-    .node-icon {
-        font-size: 2rem;
-    }
-
-    .branch-node h3 {
-        font-size: 1.125rem;
-    }
-
-    .branch-node p {
-        font-size: 0.875rem;
     }
 }
