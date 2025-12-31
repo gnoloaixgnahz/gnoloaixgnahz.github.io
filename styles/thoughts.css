@@ -1,0 +1,167 @@
+/* Thoughts-specific styles */
+.thoughts-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.thoughts-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.thoughts-intro {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.thoughts-content {
+    padding: 4rem 0;
+}
+
+.thoughts-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    color: var(--text-primary);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.thoughts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.thought-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.thought-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.thought-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.thought-category-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+}
+
+.thought-category-badge.ai {
+    background-color: var(--primary-color);
+}
+
+.thought-category-badge.data {
+    background-color: var(--secondary-color);
+}
+
+.thought-category-badge.robotics {
+    background-color: var(--accent-color);
+}
+
+.thought-date {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.thought-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.thought-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.thought-read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.thought-read-more:hover {
+    color: var(--secondary-color);
+}
+
+.thoughts-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+}
+
+/* Hide cards when filtered */
+.thought-card.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .thoughts-header h1 {
+        font-size: 2rem;
+    }
+
+    .thoughts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thoughts-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+    }
+}
+
