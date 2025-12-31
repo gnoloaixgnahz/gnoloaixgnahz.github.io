@@ -13,16 +13,22 @@
         <div class="nav-container">
             <a href="/" class="nav-logo">Tech Thoughts</a>
             <ul class="nav-menu">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/books/ai-infra/" class="nav-link active">AI Infra</a></li>
-                <li><a href="/books/datalake-bigdata/" class="nav-link">Data Lake & Big Data</a></li>
-                <li><a href="/thoughts/" class="nav-link">Thoughts</a></li>
+                <li><a href="/" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="/books/ai-infra/" class="nav-link active" data-i18n="nav.ai-infra">AI Infra</a></li>
+                <li><a href="/books/datalake-bigdata/" class="nav-link" data-i18n="nav.datalake">Data Lake & Big Data</a></li>
+                <li><a href="/thoughts/" class="nav-link" data-i18n="nav.thoughts">Thoughts</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+                    <button class="lang-btn" data-lang="zh" aria-label="中文">中文</button>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -34,10 +40,10 @@
                         <span class="book-icon-large">📚</span>
                     </div>
                     <div class="book-header-text">
-                        <h1>AI Infrastructure</h1>
-                        <p class="book-subtitle">A comprehensive guide to building and managing AI infrastructure systems</p>
+                        <h1 data-i18n="ai-infra.title">AI Infrastructure</h1>
+                        <p class="book-subtitle" data-i18n="ai-infra.subtitle">A comprehensive guide to building and managing AI infrastructure systems</p>
                         <div class="book-meta">
-                            <span class="book-status">In Progress</span>
+                            <span class="book-status" data-i18n="ai-infra.status">In Progress</span>
                         </div>
                     </div>
                 </div>
@@ -49,56 +55,56 @@
                 <div class="book-layout">
                     <aside class="book-sidebar">
                         <nav class="book-toc">
-                            <h3>Table of Contents</h3>
+                            <h3 data-i18n="ai-infra.toc.title">Table of Contents</h3>
                             <ul class="toc-list">
-                                <li><a href="#introduction">Introduction</a></li>
-                                <li><a href="#chapter-1">Chapter 1: Fundamentals</a></li>
-                                <li><a href="#chapter-2">Chapter 2: Model Deployment</a></li>
-                                <li><a href="#chapter-3">Chapter 3: Scaling ML Pipelines</a></li>
-                                <li><a href="#chapter-4">Chapter 4: Monitoring & Observability</a></li>
-                                <li><a href="#chapter-5">Chapter 5: Best Practices</a></li>
+                                <li><a href="#introduction" data-i18n="ai-infra.toc.intro">Introduction</a></li>
+                                <li><a href="#chapter-1" data-i18n="ai-infra.toc.ch1">Chapter 1: Fundamentals</a></li>
+                                <li><a href="#chapter-2" data-i18n="ai-infra.toc.ch2">Chapter 2: Model Deployment</a></li>
+                                <li><a href="#chapter-3" data-i18n="ai-infra.toc.ch3">Chapter 3: Scaling ML Pipelines</a></li>
+                                <li><a href="#chapter-4" data-i18n="ai-infra.toc.ch4">Chapter 4: Monitoring & Observability</a></li>
+                                <li><a href="#chapter-5" data-i18n="ai-infra.toc.ch5">Chapter 5: Best Practices</a></li>
                             </ul>
                         </nav>
                     </aside>
 
                     <article class="book-main">
                         <div class="book-chapter" id="introduction">
-                            <h2>Introduction</h2>
-                            <p>Welcome to the AI Infrastructure book. This comprehensive guide covers everything you need to know about building, deploying, and managing AI infrastructure systems at scale.</p>
-                            <p>In this book, we'll explore:</p>
+                            <h2 data-i18n="ai-infra.ch.intro.title">Introduction</h2>
+                            <p data-i18n="ai-infra.ch.intro.p1">Welcome to the AI Infrastructure book. This comprehensive guide covers everything you need to know about building, deploying, and managing AI infrastructure systems at scale.</p>
+                            <p data-i18n="ai-infra.ch.intro.p2">In this book, we'll explore:</p>
                             <ul>
-                                <li>Core concepts of AI infrastructure</li>
-                                <li>Model deployment strategies</li>
-                                <li>Scaling machine learning pipelines</li>
-                                <li>Monitoring and observability</li>
-                                <li>Best practices and real-world examples</li>
+                                <li data-i18n="ai-infra.ch.intro.li1">Core concepts of AI infrastructure</li>
+                                <li data-i18n="ai-infra.ch.intro.li2">Model deployment strategies</li>
+                                <li data-i18n="ai-infra.ch.intro.li3">Scaling machine learning pipelines</li>
+                                <li data-i18n="ai-infra.ch.intro.li4">Monitoring and observability</li>
+                                <li data-i18n="ai-infra.ch.intro.li5">Best practices and real-world examples</li>
                             </ul>
-                            <p class="coming-soon">Content coming soon. This book is currently being written.</p>
+                            <p class="coming-soon" data-i18n="ai-infra.ch.intro.coming">Content coming soon. This book is currently being written.</p>
                         </div>
 
                         <div class="book-chapter" id="chapter-1">
-                            <h2>Chapter 1: Fundamentals</h2>
-                            <p class="coming-soon">Content coming soon...</p>
+                            <h2 data-i18n="ai-infra.toc.ch1">Chapter 1: Fundamentals</h2>
+                            <p class="coming-soon" data-i18n="ai-infra.ch.coming">Content coming soon...</p>
                         </div>
 
                         <div class="book-chapter" id="chapter-2">
-                            <h2>Chapter 2: Model Deployment</h2>
-                            <p class="coming-soon">Content coming soon...</p>
+                            <h2 data-i18n="ai-infra.toc.ch2">Chapter 2: Model Deployment</h2>
+                            <p class="coming-soon" data-i18n="ai-infra.ch.coming">Content coming soon...</p>
                         </div>
 
                         <div class="book-chapter" id="chapter-3">
-                            <h2>Chapter 3: Scaling ML Pipelines</h2>
-                            <p class="coming-soon">Content coming soon...</p>
+                            <h2 data-i18n="ai-infra.toc.ch3">Chapter 3: Scaling ML Pipelines</h2>
+                            <p class="coming-soon" data-i18n="ai-infra.ch.coming">Content coming soon...</p>
                         </div>
 
                         <div class="book-chapter" id="chapter-4">
-                            <h2>Chapter 4: Monitoring & Observability</h2>
-                            <p class="coming-soon">Content coming soon...</p>
+                            <h2 data-i18n="ai-infra.toc.ch4">Chapter 4: Monitoring & Observability</h2>
+                            <p class="coming-soon" data-i18n="ai-infra.ch.coming">Content coming soon...</p>
                         </div>
 
                         <div class="book-chapter" id="chapter-5">
-                            <h2>Chapter 5: Best Practices</h2>
-                            <p class="coming-soon">Content coming soon...</p>
+                            <h2 data-i18n="ai-infra.toc.ch5">Chapter 5: Best Practices</h2>
+                            <p class="coming-soon" data-i18n="ai-infra.ch.coming">Content coming soon...</p>
                         </div>
                     </article>
                 </div>
@@ -108,13 +114,14 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Technology Thoughts & Books. Built with passion for sharing knowledge.</p>
+            <p data-i18n="footer.copyright">&copy; 2025 Technology Thoughts & Books. Built with passion for sharing knowledge.</p>
             <p class="footer-links">
-                <a href="https://github.com/gnoloaixgnahz/gnoloaixgnahz.github.io">GitHub Repository</a>
+                <a href="https://github.com/gnoloaixgnahz/gnoloaixgnahz.github.io" data-i18n="footer.github">GitHub Repository</a>
             </p>
         </div>
     </footer>
 
+    <script src="../../scripts/i18n.js"></script>
     <script src="../../scripts/main.js"></script>
 </body>
 </html>

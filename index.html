@@ -12,50 +12,56 @@
         <div class="nav-container">
             <a href="/" class="nav-logo">Tech Thoughts</a>
             <ul class="nav-menu">
-                <li><a href="/" class="nav-link active">Home</a></li>
-                <li><a href="/books/ai-infra/" class="nav-link">AI Infra</a></li>
-                <li><a href="/books/datalake-bigdata/" class="nav-link">Data Lake & Big Data</a></li>
-                <li><a href="/thoughts/" class="nav-link">Thoughts</a></li>
+                <li><a href="/" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="/books/ai-infra/" class="nav-link" data-i18n="nav.ai-infra">AI Infra</a></li>
+                <li><a href="/books/datalake-bigdata/" class="nav-link" data-i18n="nav.datalake">Data Lake & Big Data</a></li>
+                <li><a href="/thoughts/" class="nav-link" data-i18n="nav.thoughts">Thoughts</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+                    <button class="lang-btn" data-lang="zh" aria-label="中文">中文</button>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to My Technology Journey</h1>
-                <p class="hero-subtitle">Exploring AI, Data, and Robotics through shared thoughts, experiences, and knowledge</p>
+                <h1 class="hero-title" data-i18n="home.hero.title">Welcome to My Technology Journey</h1>
+                <p class="hero-subtitle" data-i18n="home.hero.subtitle">Exploring AI, Data, and Robotics through shared thoughts, experiences, and knowledge</p>
                 <div class="hero-buttons">
-                    <a href="/books/ai-infra/" class="btn btn-primary">AI Infrastructure Book</a>
-                    <a href="/books/datalake-bigdata/" class="btn btn-secondary">Data Lake & Big Data Book</a>
+                    <a href="/books/ai-infra/" class="btn btn-primary" data-i18n="home.hero.btn.ai">AI Infrastructure Book</a>
+                    <a href="/books/datalake-bigdata/" class="btn btn-secondary" data-i18n="home.hero.btn.data">Data Lake & Big Data Book</a>
                 </div>
             </div>
         </section>
 
         <section class="about">
             <div class="container">
-                <h2>About This Site</h2>
-                <p>This is my digital space for sharing knowledge, thoughts, and experiences in the fields of:</p>
+                <h2 data-i18n="home.about.title">About This Site</h2>
+                <p data-i18n="home.about.intro">This is my digital space for sharing knowledge, thoughts, and experiences in the fields of:</p>
                 <div class="topics-grid">
                     <div class="topic-card">
                         <div class="topic-icon">🤖</div>
-                        <h3>Artificial Intelligence</h3>
-                        <p>Infrastructure, systems, and practical insights</p>
+                        <h3 data-i18n="home.about.ai.title">Artificial Intelligence</h3>
+                        <p data-i18n="home.about.ai.desc">Infrastructure, systems, and practical insights</p>
                     </div>
                     <div class="topic-card">
                         <div class="topic-icon">📊</div>
-                        <h3>Data Engineering</h3>
-                        <p>Data lakes, big data architectures, and analytics</p>
+                        <h3 data-i18n="home.about.data.title">Data Engineering</h3>
+                        <p data-i18n="home.about.data.desc">Data lakes, big data architectures, and analytics</p>
                     </div>
                     <div class="topic-card">
                         <div class="topic-icon">🔧</div>
-                        <h3>Robotics</h3>
-                        <p>Systems, automation, and intelligent machines</p>
+                        <h3 data-i18n="home.about.robotics.title">Robotics</h3>
+                        <p data-i18n="home.about.robotics.desc">Systems, automation, and intelligent machines</p>
                     </div>
                 </div>
             </div>
@@ -63,16 +69,16 @@
 
         <section class="books-preview">
             <div class="container">
-                <h2>Featured Books</h2>
+                <h2 data-i18n="home.books.title">Featured Books</h2>
                 <div class="books-grid">
                     <article class="book-card">
                         <div class="book-cover ai-infra">
                             <span class="book-icon">📚</span>
                         </div>
                         <div class="book-content">
-                            <h3>AI Infrastructure</h3>
-                            <p>Comprehensive guide to building and managing AI infrastructure systems, covering everything from model deployment to scaling ML pipelines.</p>
-                            <a href="/books/ai-infra/" class="book-link">Read More →</a>
+                            <h3 data-i18n="home.books.ai.title">AI Infrastructure</h3>
+                            <p data-i18n="home.books.ai.desc">Comprehensive guide to building and managing AI infrastructure systems, covering everything from model deployment to scaling ML pipelines.</p>
+                            <a href="/books/ai-infra/" class="book-link" data-i18n="home.books.ai.link">Read More →</a>
                         </div>
                     </article>
                     <article class="book-card">
@@ -80,9 +86,9 @@
                             <span class="book-icon">📚</span>
                         </div>
                         <div class="book-content">
-                            <h3>Data Lake & Big Data</h3>
-                            <p>Deep dive into modern data architectures, data lake design patterns, and big data processing frameworks.</p>
-                            <a href="/books/datalake-bigdata/" class="book-link">Read More →</a>
+                            <h3 data-i18n="home.books.data.title">Data Lake & Big Data</h3>
+                            <p data-i18n="home.books.data.desc">Deep dive into modern data architectures, data lake design patterns, and big data processing frameworks.</p>
+                            <a href="/books/datalake-bigdata/" class="book-link" data-i18n="home.books.data.link">Read More →</a>
                         </div>
                     </article>
                 </div>
@@ -91,17 +97,17 @@
 
         <section class="thoughts-preview">
             <div class="container">
-                <h2>Latest Thoughts</h2>
-                <p class="section-intro">Sharing insights, experiences, and reflections on technology</p>
+                <h2 data-i18n="home.thoughts.title">Latest Thoughts</h2>
+                <p class="section-intro" data-i18n="home.thoughts.intro">Sharing insights, experiences, and reflections on technology</p>
                 <div class="thoughts-list">
                     <article class="thought-item">
                         <div class="thought-meta">
-                            <span class="thought-category">AI</span>
-                            <span class="thought-date">Coming Soon</span>
+                            <span class="thought-category" data-i18n="home.thoughts.item.category">AI</span>
+                            <span class="thought-date" data-i18n="home.thoughts.item.date">Coming Soon</span>
                         </div>
-                        <h3>Thoughts and experiences will appear here</h3>
-                        <p>This section will feature articles, insights, and reflections on AI, data engineering, and robotics.</p>
-                        <a href="/thoughts/" class="thought-link">Explore All Thoughts →</a>
+                        <h3 data-i18n="home.thoughts.item.title">Thoughts and experiences will appear here</h3>
+                        <p data-i18n="home.thoughts.item.desc">This section will feature articles, insights, and reflections on AI, data engineering, and robotics.</p>
+                        <a href="/thoughts/" class="thought-link" data-i18n="home.thoughts.item.link">Explore All Thoughts →</a>
                     </article>
                 </div>
             </div>
@@ -110,13 +116,14 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Technology Thoughts & Books. Built with passion for sharing knowledge.</p>
+            <p data-i18n="footer.copyright">&copy; 2025 Technology Thoughts & Books. Built with passion for sharing knowledge.</p>
             <p class="footer-links">
-                <a href="https://github.com/gnoloaixgnahz/gnoloaixgnahz.github.io">GitHub Repository</a>
+                <a href="https://github.com/gnoloaixgnahz/gnoloaixgnahz.github.io" data-i18n="footer.github">GitHub Repository</a>
             </p>
         </div>
     </footer>
 
+    <script src="scripts/i18n.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

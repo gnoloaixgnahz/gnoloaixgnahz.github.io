@@ -94,6 +94,43 @@ body {
     background-color: var(--primary-color);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--bg-secondary);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    min-width: 50px;
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -431,6 +468,16 @@ h2 {
 
     .nav-menu li {
         margin: 1rem 0;
+    }
+
+    .lang-switcher {
+        order: -1;
+    }
+
+    .lang-btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
+        min-width: 40px;
     }
 
     .nav-toggle {
